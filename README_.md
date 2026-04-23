@@ -1,10 +1,10 @@
-# 🎯 Smart Queue Monitor
+# Smart Queue Monitor
 
 A real-time queue monitoring system built with Python, OpenCV, YOLOv8, and Deep SORT. It detects people from a live camera feed, tracks them across defined zones, measures individual wait times, and displays a live dashboard — all without any manual input.
 
 ---
 
-## 📸 Demo
+## Demo
 
 > Camera feed with bounding boxes, zone overlays, and live stats panel.
 
@@ -15,21 +15,21 @@ Person enters queue → wait timer starts → moves to service → avg time upda
 
 ---
 
-## ✨ Features
+## Features
 
-- 🔍 **Real-time person detection** using YOLOv8n (GPU/CPU support)
-- 🧠 **Multi-object tracking** with Deep SORT (persistent IDs across frames)
-- 🗺️ **Dual-zone detection** — Queue ROI and Service ROI, adjustable on the fly
-- ⏱️ **Per-person wait time tracking** with live display on each bounding box
-- 📊 **Live dashboard** showing queue size, service count, congestion status, and average service time
-- 📈 **Exponential Moving Average** for adaptive service time estimation
-- 🖥️ **Keyboard-controlled ROI adjustment** — no code changes needed
-- 💾 **Optional CSV logging** of queue data over time
-- 🎯 **Bounding box smoothing** to reduce jitter across frames
+- **Real-time person detection** using YOLOv8n (GPU/CPU support)
+- **Multi-object tracking** with Deep SORT (persistent IDs across frames)
+- **Dual-zone detection** — Queue ROI and Service ROI, adjustable on the fly
+- **Per-person wait time tracking** with live display on each bounding box
+- **Live dashboard** showing queue size, service count, congestion status, and average service time
+- **Exponential Moving Average** for adaptive service time estimation
+- **Keyboard-controlled ROI adjustment** — no code changes needed
+- **Optional CSV logging** of queue data over time
+- **Bounding box smoothing** to reduce jitter across frames
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Component | Library / Tool |
 |-----------|---------------|
@@ -41,7 +41,7 @@ Person enters queue → wait timer starts → moves to service → avg time upda
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 smart-queue-monitor/
@@ -61,7 +61,7 @@ smart-queue-monitor/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 
@@ -88,7 +88,7 @@ The YOLOv8n model weights (`yolov8n.pt`) will be downloaded automatically on fir
 
 ---
 
-## ⌨️ Keyboard Controls
+## Keyboard Controls
 
 ### Queue ROI (Blue Box)
 
@@ -115,7 +115,7 @@ The YOLOv8n model weights (`yolov8n.pt`) will be downloaded automatically on fir
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 All settings are in the `Config` class inside each file:
 
@@ -136,7 +136,7 @@ class Config:
 
 ---
 
-## 📊 How It Works
+## How It Works
 
 ```
 Camera Frame
@@ -166,7 +166,7 @@ Display → repeat
 
 ---
 
-## 📋 Dashboard Info Panel
+## Dashboard Info Panel
 
 The on-screen panel shows:
 
@@ -179,7 +179,7 @@ The on-screen panel shows:
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 **Camera not opening:**
 The system tries `cv2.CAP_MSMF` first, then falls back to the default backend. If your camera still doesn't open, try changing `source` in `Config` to `1` or `2`.
@@ -194,13 +194,13 @@ Increase `deep_sort_max_age` (e.g., to `60`) and set `n_init=3` when creating th
 
 ---
 
-## 📄 License
+## License
 
 This project is open-source and available under the [MIT License](LICENSE).
 
 ---
 
-## 🙌 Acknowledgements
+## Acknowledgements
 
 - [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics)
 - [Deep SORT Realtime](https://github.com/levan92/deep_sort_realtime)
